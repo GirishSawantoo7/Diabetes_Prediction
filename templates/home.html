@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <style>
+    /* Reset some basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    /* Container for the form */
+    .login {
+      width: 400px;
+      padding: 40px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Form header */
+    .login h1 {
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #444;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Input fields */
+    .login input {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    .login input:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    /* Submit button */
+    .login button {
+      width: 100%;
+      padding: 14px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .login button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Add some hover effects */
+    .login:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Responsive design */
+    @media (max-width: 480px) {
+      .login {
+        width: 90%;
+        padding: 30px;
+      }
+
+      .login h1 {
+        font-size: 24px;
+      }
+
+      .login button {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login">
+    <h1>Diabetes Prediction</h1>
+    <form action="{{ url_for('predict_datapoint')}}" method="post">
+      <input type="text" name="Pregnancies" placeholder="Pregnancies" required="required" /><br>
+      <input type="text" name="Glucose" placeholder="Glucose" required="required" /><br>
+      <input type="text" name="BloodPressure" placeholder="BloodPressure" required="required" /><br>
+      <input type="text" name="SkinThickness" placeholder="SkinThickness" required="required" /><br>
+      <input type="text" name="Insulin" placeholder="Insulin" required="required" /><br>
+      <input type="text" name="BMI" placeholder="BMI" required="required" /><br>
+      <input type="text" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction"
+        required="required" /><br>
+      <input type="text" name="Age" placeholder="Age" required="required" /><br>
+
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <body>
+
+      <br>
+      <br>
+
+
+  </div>
+  {{result}}
+
+</body>
+
+</html>

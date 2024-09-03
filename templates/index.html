@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome - Diabetes Prediction</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    /* Container */
+    .welcome-container {
+      text-align: center;
+      background: #fff;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .welcome-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Heading */
+    .welcome-container h1 {
+      font-size: 36px;
+      color: #444;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Paragraph */
+    .welcome-container p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    /* Anchor Link */
+    .welcome-container a {
+      display: inline-block;
+      padding: 14px 28px;
+      background-color: #007bff;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .welcome-container a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <script>
+    function redirectToPredict() {
+      // Get the current URL
+      const currentUrl = window.location.origin;
+      // Append /predictdata to the current URL
+      const newUrl = currentUrl + '/predictdata';
+      // Open the new URL in the same tab
+      window.location.href = newUrl;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="welcome-container">
+    <h1>Welcome</h1>
+    <p>Start predicting diabetes by entering the required data.</p>
+    <!-- Link to trigger the JavaScript function -->
+    <a onclick="redirectToPredict()">Get Started</a>
+  </div>
+</body>
+
+</html>
